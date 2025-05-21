@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Skunkworks Community
+    url: https://skunkworks.africa/community
+    about: Please post general questions and course ideas here.
+  - name: Technical Support
+    url: https://skunkworks.africa/support
+    about: Please use our support page for bugs or technical issues.
