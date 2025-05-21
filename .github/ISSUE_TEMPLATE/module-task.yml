@@ -4,6 +4,7 @@ title: "[Module] <Insert module name> – Content & Delivery Tasks"
 labels: ["module", "lesson", "video", "quiz", "to-do"]
 assignees:
   - burnt-exe
+  - Mw8mba
 body:
   - type: markdown
     attributes:
