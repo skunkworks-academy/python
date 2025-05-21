@@ -6,7 +6,7 @@
 
 > **Learn Python from scratch to advanced with hands-on challenges, guided by real-world examples.**
 
-![Course Banner](./f7799584-2104-410b-8492-c33fb35277cb.png)
+![course title](https://github.com/user-attachments/assets/4eb8f12c-b11e-4958-8f18-e2aeed44afaa)
 
 ---
 
