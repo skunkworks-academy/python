@@ -1,0 +1,83 @@
+name: Module Task
+description: Plan content, video, quiz, and review steps for each module.
+title: "[Module] <Insert module name> – Content & Delivery Tasks"
+labels: ["module", "lesson", "video", "quiz", "to-do"]
+assignees:
+  - burnt-exe
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 Thank you for contributing to the Python for Everybody course!
+
+  - type: input
+    id: module_name
+    attributes:
+      label: Module Name
+      description: Name of the module (e.g., Python Functions)
+      placeholder: e.g., Introduction to Loops
+
+  - type: textarea
+    id: learning_objectives
+    attributes:
+      label: Learning Objectives
+      description: What will the student be able to do after completing this module?
+      placeholder: e.g., Understand and write Python functions using def, return, and parameters.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: content_tasks
+    attributes:
+      label: Lesson Development Tasks
+      description: Tick each item once completed.
+      options:
+        - label: Draft lesson content (Markdown or HTML)
+        - label: Include practical code examples
+        - label: Add explanatory diagrams or visuals
+
+  - type: checkboxes
+    id: video_tasks
+    attributes:
+      label: Video Recording Tasks
+      options:
+        - label: Write video script
+        - label: Record screencast
+        - label: Edit and compress video
+
+  - type: checkboxes
+    id: quiz_tasks
+    attributes:
+      label: Quiz & Activity Tasks
+      options:
+        - label: Create 3–5 multiple choice questions
+        - label: Include at least 1 coding challenge
+        - label: Add answers and explanations
+
+  - type: checkboxes
+    id: review_tasks
+    attributes:
+      label: Final Review & Submission
+      options:
+        - label: Peer review lesson content
+        - label: Upload content to LMS / repo
+        - label: Update GitHub project board
+
+  - type: input
+    id: estimated_time
+    attributes:
+      label: Estimated Time to Complete
+      placeholder: e.g., 2 hours
+    validations:
+      required: false
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty Level
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+    validations:
+      required: true
