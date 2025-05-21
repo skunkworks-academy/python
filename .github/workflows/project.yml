@@ -1,43 +1,20 @@
-name: Python for Everybody – Skunkworks Academy
-description: >
-  A beginner-friendly, comprehensive Python 3 course for aspiring developers,
-  covering scripting, data handling, web APIs, and database integration — created
-  by Andy (Mw4mba) at Skunkworks Academy.
+name: Project Board Sync
 
-custom_fields:
-  - name: Difficulty Level
-    type: single_select
-    options: [Beginner, Intermediate, Advanced]
-  - name: Lesson Duration
-    type: number
-    unit: minutes
-  - name: Video Status
-    type: single_select
-    options: [Not Started, Recording, Editing, Published]
-  - name: Completion Status
-    type: single_select
-    options: [To Do, In Progress, Review, Completed]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
 
-automation:
-  issue_templates:
-    - name: Lesson Issue Template
-      title: "[Lesson] <Module Name>"
-      body: |
-        ## Module Overview
-        Describe what this module will teach the learner.
+jobs:
+  sync-project-board:
+    runs-on: ubuntu-latest
 
-        ## Learning Objectives
-        - Objective 1
-        - Objective 2
-        - Objective 3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-        ## Tasks
-        - [ ] Create lesson content
-        - [ ] Record video
-        - [ ] Create quiz
-        - [ ] Peer review
-
-        ## Additional Notes
-        Add any references or related materials here.
-
-      labels: [lesson, module]
+      - name: Display project setup info
+        run: |
+          echo "Syncing GitHub Project Board with the latest content..."
+          echo "This step can be customized to include scripts or automation logic."
