@@ -1,0 +1,43 @@
+name: Python for Everybody – Skunkworks Academy
+description: >
+  A beginner-friendly, comprehensive Python 3 course for aspiring developers,
+  covering scripting, data handling, web APIs, and database integration — created
+  by Andy (Mw4mba) at Skunkworks Academy.
+
+custom_fields:
+  - name: Difficulty Level
+    type: single_select
+    options: [Beginner, Intermediate, Advanced]
+  - name: Lesson Duration
+    type: number
+    unit: minutes
+  - name: Video Status
+    type: single_select
+    options: [Not Started, Recording, Editing, Published]
+  - name: Completion Status
+    type: single_select
+    options: [To Do, In Progress, Review, Completed]
+
+automation:
+  issue_templates:
+    - name: Lesson Issue Template
+      title: "[Lesson] <Module Name>"
+      body: |
+        ## Module Overview
+        Describe what this module will teach the learner.
+
+        ## Learning Objectives
+        - Objective 1
+        - Objective 2
+        - Objective 3
+
+        ## Tasks
+        - [ ] Create lesson content
+        - [ ] Record video
+        - [ ] Create quiz
+        - [ ] Peer review
+
+        ## Additional Notes
+        Add any references or related materials here.
+
+      labels: [lesson, module]
